@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.blank{
+  color: blue;
+}
+
+.form-select{
+  width: 150px;
+  margin-right: 10px;
+  border:solid black 1px;
+  background-color: rgb(180, 233, 21);
+  
+}
