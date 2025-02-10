@@ -1,15 +1,9 @@
 import { useState } from "react";
 import "./App.css";
-import About from "./components/About";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-import * as ReactDOM from "react-dom/client";
 
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
 
 
 function App() {
@@ -18,7 +12,7 @@ function App() {
   const toggleMode =()=>{
     if(mode==='light'){
       setMode('dark')
-      document.body.style.backgroundColor='#042743'
+      document.body.style.backgroundColor='#05131c'
 
     }
     else{
@@ -32,7 +26,7 @@ function App() {
   return (
     <>
     
-      <Navbar title="TextEditor" aboutText="AboutTextUtils" mode={mode} toggleMode={toggleMode}/>
+      <Navbar title="TextMorph" aboutText="AboutTextUtils" mode={mode} toggleMode={toggleMode}/>
       <div className="container my-3" >
           <TextForm heading="Enter the text" mode={mode}/>
       </div>

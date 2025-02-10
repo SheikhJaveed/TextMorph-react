@@ -21,14 +21,7 @@ export default function Navbar(props) {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className={`nav-link ${props.mode === 'dark' ? 'white' : 'dark'} `} to="/">
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className={`nav-link  ${props.mode === 'dark' ? 'white' : 'dark'}`}  to="/about">About</Link>
-              </li>
+              
             </ul>
             
             {/* we write javascript logic in the backticks `{}` */}

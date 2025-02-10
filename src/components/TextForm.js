@@ -24,19 +24,13 @@ export default function TextForm(props) {
     setText(event.target.value);
   };
 
-  const handleFindOnChange = (event) => {
-    console.log("On change");
-    setFind(event.target.value);
-  };
-
-  
-
+ 
   const handleCopyClick = () => {
-    console.log("copied text");
-    var text = document.getElementById("my-box2");
-    text.select();
-    navigator.clipboard.writeText(text.value);
+    console.log("Copied text");
+    navigator.clipboard.writeText(text);
+    alert("Copied to clipboard!"); // Optional feedback
   };
+  
 
   const handleSpaces = () => {
     let newText = text.split(/[ ]+/);
@@ -51,7 +45,6 @@ export default function TextForm(props) {
   const [text, setText] = useState("Enter text here"); //hooks in react
   // text="jksdsld" //wrong way to set text
   // setText="kshdkds" //correct way to set text
-  const [find, setFind] = useState("Enter text to find");
   return (
     <>
       <div style={{ color: props.mode === "dark" ? "white" : "#042743" }}>
@@ -63,26 +56,26 @@ export default function TextForm(props) {
             value={text}
             onChange={handleOnChange}
             style={{
-              backgroundColor: props.mode === "dark" ? "grey" : "white",
+              backgroundColor: props.mode === "dark" ? "#050505" : "white",
               color: props.mode === "dark" ? "white" : "black",
             }}
             id="my-box"
             rows="10"
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-1" onClick={handleOnClick}>
+        <button className="btn btn-success mx-1" onClick={handleOnClick}>
           Convert to uppercase
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleLowClick}>
+        <button className="btn btn-success mx-2" onClick={handleLowClick}>
           Convert to lowercase
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleClearClick}>
+        <button className="btn btn-success mx-2" onClick={handleClearClick}>
           Clear Text
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleCopyClick}>
+        <button className="btn btn-success mx-2" onClick={handleCopyClick}>
           Copy Text
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleSpaces}>
+        <button className="btn btn-success mx-2" onClick={handleSpaces}>
           Remove extra space
         </button>
       </div>

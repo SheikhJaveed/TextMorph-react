@@ -3,8 +3,6 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import About from './components/About';
-import TextForm from './components/TextForm';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -21,11 +19,8 @@ const router=createBrowserRouter([
     path:"/home",
     element:<App/>
   },
-  {
-    path:"/about",
-    element:<About/>
-  }
 ]);
+ // eslint-disable-next-line
 const root=ReactDOM.createRoot(document.getElementById("root")).render(
   
   <RouterProvider router={router} />
